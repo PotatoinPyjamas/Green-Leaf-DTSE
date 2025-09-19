@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenLeaf Organics</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: "Arial", sans-serif; line-height: 1.6; color: #333; }
+
+    /* Header */
+    header {
+      background: #2e7d32; color: white; padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    header .logo { font-size: 1.3rem; font-weight: bold; }
+    nav ul { list-style: none; display: flex; gap: 1rem; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+
+    /* Hero Section */
+    #hero {
+      position: relative;
+      background: url("https://i.postimg.cc/NKtkTy5Z/fresh-vegetables-food.jpg") no-repeat center center/cover;
+      height: 80vh;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center; color: white; overflow: hidden;
+    }
+    #hero h1 { font-size: 2.5rem; z-index: 2; }
+    #hero p { margin: 1rem 0; font-size: 1.2rem; z-index: 2; }
+    .cta-btn {
+      background: #ff9800; color: white; padding: 0.8rem 1.5rem;
+      border-radius: 5px; text-decoration: none; z-index: 2;
+    }
+    .cta-btn:hover { background: #e68900; }
+
+    /* Snowflakes */
+    .snow { position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; overflow: hidden; z-index: 1; }
+    .snowflake {
+      position: absolute; top: -10px; font-size: 1rem; color: white; opacity: 0.8;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+
+    /* Sections */
+    section { padding: 3rem 2rem; text-align: center; }
+    h2 { margin-bottom: 1rem; color: #2e7d32; }
+
+    /* Products */
+    .product-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem; margin-top: 2rem;
+    }
+    .product-card {
+      border: 1px solid #ddd; padding: 1.5rem; border-radius: 10px; background: #f9f9f9;
+      transition: transform 0.2s ease;
+    }
+    .product-card img { max-width: 100%; border-radius: 8px; margin-bottom: 1rem; }
+    .product-card:hover { transform: translateY(-5px); box-shadow: 0 3px 6px rgba(0,0,0,0.2); }
+
+    /* Testimonials */
+    .testimonial {
+      background: #f1f8e9; border-left: 5px solid #2e7d32;
+      margin: 1rem auto; padding: 1rem; max-width: 600px;
+    }
+
+    /* Contact Form */
+    form { display: flex; flex-direction: column; max-width: 500px; margin: 2rem auto; }
+    form input, form textarea {
+      margin-bottom: 1rem; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px;
+    }
+    form button {
+      background: #2e7d32; color: white; padding: 0.8rem; border: none;
+      border-radius: 5px; cursor: pointer;
+    }
+    form button:hover { background: #1b5e20; }
+
+    /* Map */
+    .map-container {
+      margin-top: 2rem; border: 2px solid #2e7d32; border-radius: 8px; overflow: hidden;
+    }
+
+    /* YouTube */
+    .video-container {
+      position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+      max-width: 800px; margin: 2rem auto; border-radius: 10px; border: 2px solid #2e7d32;
+    }
+    .video-container iframe {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    }
+
+    /* Footer */
+    footer { background: #2e7d32; color: white; text-align: center; padding: 1rem; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">🌿 GreenLeaf Organics</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="snow"></div>
+    <h1>Fresh. Organic. Healthy.</h1>
+    <p>Your trusted organic grocery store in Hyderabad.</p>
+    <a href="#products" class="cta-btn">Explore Products</a>
+  </section>
+
+  <!-- About Us -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      At GreenLeaf Organics, we bring you farm-fresh, chemical-free produce and groceries 
+      to promote a healthier lifestyle for you and your family. Located in the heart of 
+      Gachibowli, Hyderabad, we are committed to sustainability, quality, and trust.
+    </p>
+  </section>
+
+  <!-- Products -->
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://pramitgupta.github.io/GreenLeaf_New/images/B1.png" alt="Fresh Vegetables">
+        <h3>Fresh Vegetables</h3>
+        <p>Locally sourced seasonal veggies, 100% organic.</p>
+      </div>
+      <div class="product-card">
+        <img src="https://pramitgupta.github.io/GreenLeaf_New/images/B2.png" alt="Organic Fruits">
+        <h3>Organic Fruits</h3>
+        <p>Sweet, juicy, and chemical-free fruits for your family.</p>
+      </div>
+      <div class="product-card">
+        <img src="https://pramitgupta.github.io/GreenLeaf_New/images/B3.png" alt="Whole Grains">
+        <h3>Whole Grains</h3>
+        <p>Rice, millets, and pulses grown naturally and packed with nutrition.</p>
+      </div>
+      <div class="product-card">
+        <img src="https://pramitgupta.github.io/GreenLeaf_New/images/B4.png" alt="Dairy & More">
+        <h3>Dairy & More</h3>
+        <p>Pure milk, ghee, honey, and other natural essentials.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story (YouTube Video) -->
+  <section id="story">
+    <h2>Our Story</h2>
+    <p>Take a closer look at GreenLeaf Organics and how we bring nature’s goodness to your table.</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+              title="GreenLeaf Organics Story"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial">
+      <p>"The best organic store in Hyderabad! Super fresh and reliable."</p>
+      <h4>- Priya Sharma</h4>
+    </div>
+    <div class="testimonial">
+      <p>"I love their fruits and vegetables – tastes like it’s straight from the farm!"</p>
+      <h4>- Ramesh Reddy</h4>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> 94XXXXXXX0</p>
+    <p><strong>Email:</strong> greenleaf.organics@dtse.com</p>
+    <p><strong>Address:</strong> 123, ISB Road, GachiBowli, Hyderabad TG 500111</p>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Google Maps Embed -->
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.580727148318!2d78.34979631517695!3d17.44222278804685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93e4a8bdb4a7%3A0x6d55f6a4a7a1a1e!2sISB%20Rd%2C%20Gachibowli%2C%20Hyderabad%2C%20Telangana%20500111!5e0!3m2!1sen!2sin!4v1695200000000!5m2!1sen!2sin"
+        width="100%" height="400" style="border:0;" allowfullscreen=""
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 GreenLeaf Organics | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // Contact form
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you for contacting GreenLeaf Organics! We’ll get back to you soon.");
+      this.reset();
+    });
+
+    // Snowflake animation
+    function createSnowflake() {
+      const snowflake = document.createElement("div");
+      snowflake.classList.add("snowflake");
+      snowflake.textContent = "❄";
+      snowflake.style.left = Math.random() * window.innerWidth + "px";
+      snowflake.style.animationDuration = (5 + Math.random() * 5) + "s"; // speed
+      snowflake.style.fontSize = (10 + Math.random() * 20) + "px"; // size
+      document.querySelector(".snow").appendChild(snowflake);
+      setTimeout(() => { snowflake.remove(); }, 10000);
+    }
+    setInterval(createSnowflake, 300);
+  </script>
+</body>
+</html>
